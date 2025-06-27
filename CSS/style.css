@@ -1,0 +1,193 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #101820;
+    color: #dddbdb;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#startScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    padding: 2rem;
+}
+#startScreen button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #00b894;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+#startScreen button:hover {
+    background-color: #019875;
+}
+#gameContainer, #storyContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+#statsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+#playerStats, #enemyStats {
+    background: #1c2b35;
+    padding: 1rem;
+    border-radius: 12px;
+    flex: 1;
+    margin: 0 0.5rem;
+}
+#cardContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+#cardContainer button {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #0984e3;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+#cardContainer button:hover {
+    background-color: #0652dd;
+}
+#cardContainer button::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2d3436;
+    color: #dddbdb;
+    padding: 0.5rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+#cardContainer button:hover::after {
+    opacity: 1;
+}
+#battleLog {
+    background: #2d3436;
+    padding: 1rem;
+    border-radius: 12px;
+    height: 150px;
+    overflow-y: auto;
+}
+.text-bubble {
+    background: #263238;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    align-self: center;
+}
+#choiceButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+#choiceButtons button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #00cec9;
+    color: #dddbdb;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#choiceButtons button:hover {
+    background-color: #00b894;
+}
+/*  Journal entries */
+#journalContainer {
+    background-color: #1c2b35;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 12px;
+    max-width: 600px;
+    align-self: center;
+}
+#journalContainer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00cec9;
+}
+#journalList {
+    list-style-type: none;
+    padding-left: 0;
+}
+#journalList li {
+    background-color: #2d3436;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+}
+/* Modal dialog */
+dialog#modalDialog {
+    background-color: #1c2b35;
+    border: 2px solid #00cec9;
+    color: #dddbdb;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    font-size: 1rem;
+    z-index: 1000;
+}
+dialog#modalDialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+#modalDialog h3 {
+    margin-top: 0;
+    color: #00cec9;
+}
+#modalDialog button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #00cec9;
+    border: none;
+    border-radius: 8px;
+    color: #dddbdb;
+    font-weight: bold;
+    cursor: pointer;
+}
+#modalDialog button:hover {
+    background-color: #00b894;
+}
+/* Footer credits */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1c2b35;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+footer h4 {
+    margin: 0.2rem 0;
+    font-weight: normal;
+    color: #b4b4b4;
+    margin-top: auto
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>B.I.T: Echoes of Steel</title>
+    <link rel="icon" href="IMAGE/B.IT Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="AUDIO/sci-fi-moodtimeflow.mp3" type="audio/mpeg">
+    </audio>
+    <main>
+        <!-- Startscherm -->
+        <section id="startScreen">
+            <header>
+                <h1>B.I.T: Echoes of Steel</h1>
+            </header>
+            <p>Je bent verbonden met Izzy. Leid hen door een onbekende dreiging binnen B.I.T.</p>
+            <button id="startGameBtn">Start Game</button>
+        </section>
+        <!-- story -->
+        <div id="storyContainer" style="display:none;" aria-live="polite">
+            <div id="storyText" class="text-bubble"></div>
+            <nav id="choiceButtons"></nav>
+        </div>
+        <!-- Gevechtsscherm -->
+        <section id="gameContainer" style="display: none;">
+            <header>
+                <h2>Battle Interface</h2>
+            </header>
+            <div id="statsContainer">
+                <aside id="playerStats">
+                    <h3>Izzy</h3>
+                    <p id="playerHealth">Health: 100</p>
+                    <p id="playerDefense">Defense: 0</p>
+                </aside>
+                <aside id="enemyStats">
+                    <h3>Enemy</h3>
+                    <p id="enemyHealth">Health: 100</p>
+                </aside>
+            </div>
+            <section id="cardContainer" aria-label="Kaarten"></section>
+            <section id="battleLog" aria-label="Battle Log"></section>
+        </section>
+        <footer>
+            <section>
+                <h4>Game ontworpen door Iz-Dine</h4>
+                <p>Een interactieve ervaring binnen CMD • 2025</p>
+            </section>
+        </footer>
+    </main>
+    <script src="SCRIPT/script.js"></script>
+</body>
+</html>
